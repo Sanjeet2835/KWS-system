@@ -1,0 +1,4 @@
+-r requirements.txt
+tensorflow>=2.15
+matplotlib>=3.8
+tensorflow-model-optimization>=0.8

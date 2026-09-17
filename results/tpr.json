@@ -1,0 +1,227 @@
+{
+  "runs": [
+    {
+      "measured_at": "2026-08-31T12:03:52+00:00",
+      "keyword": "marvin",
+      "speaker": "mayank",
+      "threshold": 0.84,
+      "overall": {
+        "n": 20,
+        "hits": 2,
+        "tpr": 0.1
+      },
+      "by_distance": {
+        "1m": {
+          "n": 10,
+          "hits": 2,
+          "tpr": 0.2,
+          "median_wake_latency_s": 0.78,
+          "trials": [
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": true,
+              "latency_s": 0.78,
+              "score": 0.996,
+              "p_keyword": 0.996,
+              "invoke_us": 36860,
+              "mfcc_us": 30026
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": true,
+              "latency_s": 0.659,
+              "score": 0.906,
+              "p_keyword": 0.906,
+              "invoke_us": 36919,
+              "mfcc_us": 30018
+            },
+            {
+              "hit": false
+            }
+          ]
+        },
+        "3m": {
+          "n": 10,
+          "hits": 0,
+          "tpr": 0.0,
+          "median_wake_latency_s": null,
+          "trials": [
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "measured_at": "2026-08-31T12:19:19+00:00",
+      "keyword": "marvin",
+      "speaker": "mayank",
+      "threshold": 0.55,
+      "overall": {
+        "n": 20,
+        "hits": 7,
+        "tpr": 0.35
+      },
+      "by_distance": {
+        "1m": {
+          "n": 10,
+          "hits": 4,
+          "tpr": 0.4,
+          "median_wake_latency_s": 0.845,
+          "trials": [
+            {
+              "hit": true,
+              "latency_s": 0.845,
+              "score": 0.996,
+              "p_keyword": 0.996,
+              "invoke_us": 36801,
+              "mfcc_us": 30017
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": true,
+              "latency_s": 0.3,
+              "score": 0.988,
+              "p_keyword": 0.988,
+              "invoke_us": 36723,
+              "mfcc_us": 29996
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": true,
+              "latency_s": 2.11,
+              "score": 0.988,
+              "p_keyword": 0.988,
+              "invoke_us": 38761,
+              "mfcc_us": 32036
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": true,
+              "latency_s": 0.588,
+              "score": 0.879,
+              "p_keyword": 0.879,
+              "invoke_us": 36280,
+              "mfcc_us": 30226
+            },
+            {
+              "hit": false
+            }
+          ]
+        },
+        "3m": {
+          "n": 10,
+          "hits": 3,
+          "tpr": 0.3,
+          "median_wake_latency_s": 1.404,
+          "trials": [
+            {
+              "hit": true,
+              "latency_s": 1.055,
+              "score": 0.977,
+              "p_keyword": 0.977,
+              "invoke_us": 38765,
+              "mfcc_us": 30118
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": true,
+              "latency_s": 1.852,
+              "score": 0.984,
+              "p_keyword": 0.984,
+              "invoke_us": 36274,
+              "mfcc_us": 30224
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": true,
+              "latency_s": 1.404,
+              "score": 0.938,
+              "p_keyword": 0.938,
+              "invoke_us": 36968,
+              "mfcc_us": 30155
+            },
+            {
+              "hit": false
+            },
+            {
+              "hit": false
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[Unit]
+Description=Anuvani ASR server (KWS1)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+SupplementaryGroups=input video
+WorkingDirectory=/home/pi/sahayak
+Environment=PYTHONUNBUFFERED=1
+Environment=SAHAYAK_ASR_HOST=0.0.0.0
+Environment=SDL_VIDEODRIVER=dummy
+Environment=SAHAYAK_WHISPER=distil-small.en
+EnvironmentFile=-/home/pi/sahayak/.env
+ExecStart=/home/pi/sahayak/.venv/bin/python -u -m server.asr_server --host 0.0.0.0
+Restart=always
+RestartSec=2
+TimeoutStopSec=5
+KillMode=mixed
+KillSignal=SIGTERM
+SendSIGKILL=yes
+
+[Install]
+WantedBy=multi-user.target

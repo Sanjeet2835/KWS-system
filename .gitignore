@@ -1,0 +1,15 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+data/**/*.wav
+!data/.gitkeep
+data/_cache/
+models/*.npy
+models/*.json
+!models/.gitkeep
+models/vosk-model*
+assets/chime.wav
+firmware/include/wifi_secrets.h
+.env
