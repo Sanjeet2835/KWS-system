@@ -24,8 +24,9 @@ python -m tools.smoke_test
 python -m tools.make_demo_wav
 python -m server.asr_server --no-ui &
 python -m node.main --source file --wav data/demo_speech.wav --detector stub
-# Training clips are in data/marvin/ and data/sahayak/ (wavs are in git).
-# Do not commit data/_cache/; ingest downloads Speech Commands if you need it.
+# Training clips: data/marvin/, data/sahayak/
+# Speech Commands v2 unpack: data/_cache/speech_commands_v0.02/ (not the .tar.gz)
+# Small Vosk model: models/vosk-model-small-en-us-0.15/
 ```
 
 ## Pi 4B (blank SD)

@@ -1,0 +1,7 @@
+{
+  "n": 200,
+  "argmax_agreement": 1.0,
+  "p_keyword_mean_abs_drift": 0.00114,
+  "p_keyword_max_abs_drift": 0.01459,
+  "calibrated_on": "/Users/jl-mayank/sih 2026/models/sahayak.rep.npy"
+}

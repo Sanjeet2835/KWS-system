@@ -1,0 +1,488 @@
+{
+  "keyword": "marvin",
+  "holdout_speaker": "speech_commands_testing_list",
+  "real_speakers": [
+    "00176480",
+    "004ae714",
+    "00970ce1",
+    "00b01445",
+    "00f0204f",
+    "012187a4",
+    "012c8314",
+    "0132a06d",
+    "0135f3f2",
+    "0137b3f4",
+    "014f9f65",
+    "01648c51",
+    "0165e0e8",
+    "016e2c6d",
+    "017c4098",
+    "019fa366",
+    "01b4757a",
+    "01bb6a2a",
+    "01bcfc0c",
+    "01d22d03",
+    "0227998e",
+    "022cd682",
+    "023a61ad",
+    "026290a7",
+    "02746d24",
+    "02ade946",
+    "02e42bed",
+    "02e85b60",
+    "030ec18b",
+    "03401e93",
+    "03431e13",
+    "035de8fe",
+    "0362539c",
+    "037c445a",
+    "0397ecda",
+    "03c96658",
+    "03cf93b1",
+    "042186b8",
+    "042a8dde",
+    "042ea76c",
+    "0447d7c1",
+    "0474c92a",
+    "0487ba9b",
+    "050170cb",
+    "0585b66d",
+    "05b2db80",
+    "05cf43ef",
+    "0616de09",
+    "063d48cf",
+    "0685264e",
+    "069ab0d5",
+    "06a79a03",
+    "06f6c194",
+    "07089da9",
+    "070b49af",
+    "0717b9f6",
+    "07363607",
+    "075e38c3",
+    "079d1020",
+    "07ad9b59",
+    "07c5129e",
+    "07de53d3",
+    "0819edb0",
+    "08ab231c"
+  ],
+  "n_real_speakers": 2238,
+  "val_is_speaker_disjoint": true,
+  "source": "speech_commands_v0.02",
+  "smoothing": {
+    "window": 2,
+    "debounce_hits": 2
+  },
+  "splits": [
+    {
+      "split": "train",
+      "n": 12703,
+      "accuracy": 0.8307,
+      "confusion": [
+        [
+          4405,
+          1843,
+          247
+        ],
+        [
+          0,
+          5469,
+          60
+        ],
+        [
+          0,
+          0,
+          679
+        ]
+      ],
+      "at_default_threshold": {
+        "threshold": 0.5,
+        "n_keyword": 6495,
+        "n_negative": 6208,
+        "tpr": 0.6778,
+        "far": 0.0,
+        "false_accepts": 0,
+        "far_by_class": {
+          "unknown": 0.0,
+          "silence": 0.0
+        }
+      },
+      "sweep": [
+        {
+          "threshold": 0.3,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.7158,
+          "far": 0.0002,
+          "false_accepts": 1,
+          "far_by_class": {
+            "unknown": 0.0002,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.35,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.7059,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.4,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.6958,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.45,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.6848,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.5,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.6778,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.55,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.6697,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.6,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.6613,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.65,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.653,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.7,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.6446,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.75,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.6322,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.8,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.6202,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.85,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.6043,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.9,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.5835,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.95,
+          "n_keyword": 6495,
+          "n_negative": 6208,
+          "tpr": 0.5483,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "split": "val",
+      "n": 11164,
+      "accuracy": 0.992,
+      "confusion": [
+        [
+          152,
+          42,
+          1
+        ],
+        [
+          1,
+          10764,
+          45
+        ],
+        [
+          0,
+          0,
+          159
+        ]
+      ],
+      "at_default_threshold": {
+        "threshold": 0.5,
+        "n_keyword": 195,
+        "n_negative": 10969,
+        "tpr": 0.7795,
+        "far": 0.0001,
+        "false_accepts": 1,
+        "far_by_class": {
+          "unknown": 0.0001,
+          "silence": 0.0
+        }
+      },
+      "sweep": [
+        {
+          "threshold": 0.3,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.8,
+          "far": 0.0002,
+          "false_accepts": 2,
+          "far_by_class": {
+            "unknown": 0.0002,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.35,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.7846,
+          "far": 0.0002,
+          "false_accepts": 2,
+          "far_by_class": {
+            "unknown": 0.0002,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.4,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.7846,
+          "far": 0.0001,
+          "false_accepts": 1,
+          "far_by_class": {
+            "unknown": 0.0001,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.45,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.7795,
+          "far": 0.0001,
+          "false_accepts": 1,
+          "far_by_class": {
+            "unknown": 0.0001,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.5,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.7795,
+          "far": 0.0001,
+          "false_accepts": 1,
+          "far_by_class": {
+            "unknown": 0.0001,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.55,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.7744,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.6,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.759,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.65,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.7487,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.7,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.7282,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.75,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.7128,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.8,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.7077,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.85,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.6872,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.9,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.6667,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        },
+        {
+          "threshold": 0.95,
+          "n_keyword": 195,
+          "n_negative": 10969,
+          "tpr": 0.641,
+          "far": 0.0,
+          "false_accepts": 0,
+          "far_by_class": {
+            "unknown": 0.0,
+            "silence": 0.0
+          }
+        }
+      ]
+    }
+  ],
+  "val_is_real_speaker": true
+}
