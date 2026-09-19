@@ -24,6 +24,8 @@ python -m tools.smoke_test
 python -m tools.make_demo_wav
 python -m server.asr_server --no-ui &
 python -m node.main --source file --wav data/demo_speech.wav --detector stub
+# Training clips are in data/marvin/ and data/sahayak/ (wavs are in git).
+# Do not commit data/_cache/; ingest downloads Speech Commands if you need it.
 ```
 
 ## Pi 4B (blank SD)
