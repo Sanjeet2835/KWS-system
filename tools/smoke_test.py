@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from node.capture import float_to_int16, frames_from_array, int16_to_float  # noqa: E402
 from node.detector import StubDetector  # noqa: E402
 from node.energy import EnergyGate  # noqa: E402
-from node.features import FeatureRing, features_from_clip, mfcc_frame  # noqa: E402
+from node.features import FeatureRing, features_from_clip, log_mel_frame  # noqa: E402
 from node.ring import SampleRing  # noqa: E402
 from shared.feature_spec import CLIP_SAMPLES, FEATURE_SHAPE, HOP_SAMPLES, WINDOW_SAMPLES  # noqa: E402
 from shared.protocol import pack_end, pack_frame, pack_header, unpack_header  # noqa: E402
@@ -29,7 +29,7 @@ def test_features() -> None:
         ring.push_hop(hop)
     assert ring.ready()
     assert ring.copy().shape == FEATURE_SHAPE
-    row = mfcc_frame(clip[:WINDOW_SAMPLES])
+    row = log_mel_frame(clip[:WINDOW_SAMPLES])
     assert row.shape == (FEATURE_SHAPE[1],)
 
 

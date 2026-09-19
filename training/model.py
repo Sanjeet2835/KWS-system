@@ -6,6 +6,8 @@ Designed for TinyML / ESP32-S3 deployment.
 from __future__ import annotations
 
 from shared.feature_spec import FEATURE_SHAPE
+import keras
+from keras import layers
 
 N_CLASSES = 3  # keyword, unknown, silence
 
@@ -14,8 +16,7 @@ def build_dscnn_s(
     n_classes: int = N_CLASSES,
     input_shape=FEATURE_SHAPE,
 ):
-    from tensorflow import keras
-    from tensorflow.keras import layers
+
 
     inp = keras.Input(shape=input_shape, name="mfcc")
 

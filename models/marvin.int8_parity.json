@@ -1,7 +1,7 @@
 {
-  "n": 200,
-  "argmax_agreement": 0.995,
-  "p_keyword_mean_abs_drift": 0.00612,
-  "p_keyword_max_abs_drift": 0.15769,
-  "calibrated_on": "/Users/jl-mayank/sih 2026/models/marvin.rep.npy"
+  "n": 1,
+  "argmax_agreement": 1.0,
+  "p_keyword_mean_abs_drift": 0.00745,
+  "p_keyword_max_abs_drift": 0.00745,
+  "calibrated_on": "/home/sanjeet/ai_workspace/KWS model/sih-2026/models/marvin.rep.npy"
 }

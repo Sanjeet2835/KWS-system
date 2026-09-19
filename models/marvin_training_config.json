@@ -1,0 +1,16 @@
+{
+  "keyword": "marvin",
+  "model": "DS-CNN-S",
+  "epochs": 50,
+  "batch_size": 32,
+  "learning_rate": 0.002,
+  "noise_cap": 400,
+  "feature_shape": [
+    49,
+    20,
+    1
+  ],
+  "n_classes": 3,
+  "optimizer": "Adam",
+  "dtype": "float32"
+}

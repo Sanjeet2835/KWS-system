@@ -46,9 +46,10 @@ bool kws_begin() {
 
   // Exactly the operators DS-CNN-S needs. A full resolver would waste flash.
   // PAD is the explicit ZeroPadding2D in front of each VALID depthwise conv.
-  static tflite::MicroMutableOpResolver<7> resolver;
+  static tflite::MicroMutableOpResolver<8> resolver;
   if (resolver.AddConv2D() != kTfLiteOk) return false;
   if (resolver.AddDepthwiseConv2D() != kTfLiteOk) return false;
+  if (resolver.AddAdd() != kTfLiteOk) return false;
   if (resolver.AddPad() != kTfLiteOk) return false;
   if (resolver.AddRelu() != kTfLiteOk) return false;
   if (resolver.AddMean() != kTfLiteOk) return false;

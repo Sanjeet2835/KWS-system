@@ -74,7 +74,7 @@ static void fft_forward(float *re, float *im) {
 }
 
 static void frame_to_mfcc(const float *win, float *row) {
-  // Pre-emphasis inside the window, exactly as mfcc_frame() does: sample 0 is
+  // Pre-emphasis inside the window, exactly as log_mel_frame() does: sample 0 is
   // left alone, the rest get x[n] - 0.97*x[n-1]. Written into the FFT buffer so
   // `win` stays clean for the next frame, which overlaps this one by 160.
   g_re[0] = win[0] * MFCC_HANN[0];
@@ -83,7 +83,7 @@ static void frame_to_mfcc(const float *win, float *row) {
     g_re[n] = (win[n] - MFCC_PREEMPH * win[n - 1]) * MFCC_HANN[n];
     g_im[n] = 0.0f;
   }
-  // Zero-pad 480 -> 512 so the transform is radix-2.
+  // Zero-pad the analysis window to the radix-2 FFT length.
   memset(g_re + MFCC_WIN, 0, (MFCC_NFFT - MFCC_WIN) * sizeof(float));
   memset(g_im + MFCC_WIN, 0, (MFCC_NFFT - MFCC_WIN) * sizeof(float));
 
@@ -111,14 +111,8 @@ static void frame_to_mfcc(const float *win, float *row) {
     g_logmel[m] = logf(acc < 1e-10f ? 1e-10f : acc);
   }
 
-  for (int c = 0; c < MFCC_N_MFCC; ++c) {
-    const float *dct = MFCC_DCT + c * MFCC_N_MELS;
-    float acc = 0.0f;
-    for (int m = 0; m < MFCC_N_MELS; ++m) {
-      acc += dct[m] * g_logmel[m];
-    }
-    row[c] = acc;
-  }
+  // The model consumes Log-Mel bands directly (not MFCC/DCT coefficients).
+  for (int m = 0; m < MFCC_N_MELS; ++m) row[m] = g_logmel[m];
 }
 
 void mfcc_from_clip(const int16_t *clip, float *out) {
@@ -132,7 +126,7 @@ void mfcc_from_clip(const int16_t *clip, float *out) {
   }
   frame_to_mfcc(g_win, out);
 
-  const int keep = MFCC_WIN - MFCC_HOP;  // 160 samples shared with the next frame
+  const int keep = MFCC_WIN - MFCC_HOP;
   for (int f = 1; f < MFCC_N_FRAMES; ++f) {
     memmove(g_win, g_win + MFCC_HOP, keep * sizeof(float));
     const int16_t *src = clip + MFCC_WIN + (f - 1) * MFCC_HOP;

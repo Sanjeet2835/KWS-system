@@ -133,7 +133,12 @@ def slice_noise_as_unknown(root: Path, cap: int) -> list[np.ndarray]:
     return out[:cap]
 
 
-def collect(keyword: str, holdout_speaker: str | None, noise_cap: int):
+def collect(
+    keyword: str,
+    holdout_speaker: str | None,
+    noise_cap: int,
+    max_clips_per_folder: int | None = None,
+):
     root = DATA_DIR / keyword
     if not root.exists():
         raise SystemExit(
@@ -151,7 +156,17 @@ def collect(keyword: str, holdout_speaker: str | None, noise_cap: int):
         folder = root / folder_name
         if not folder.exists():
             continue
-        for wav in sorted(folder.glob("*.wav")):
+        wavs = sorted(folder.glob("*.wav"))
+        if max_clips_per_folder is not None:
+            # Keep both official-split sides present in a smoke run. This option
+            # is intentionally opt-in; normal training still consumes all data.
+            if val_set is not None:
+                val_wavs = [w for w in wavs if f"{folder_name}/{w.name}" in val_set]
+                train_wavs = [w for w in wavs if f"{folder_name}/{w.name}" not in val_set]
+                wavs = train_wavs[:max_clips_per_folder] + val_wavs[:max_clips_per_folder]
+            else:
+                wavs = wavs[:max_clips_per_folder]
+        for wav in wavs:
             speaker = _speaker_of(wav)
             if speaker != "tts":
                 speakers.add(speaker)
@@ -333,6 +348,12 @@ def parse_args() -> argparse.Namespace:
         help="real speaker used as validation; default = last one found",
     )
     p.add_argument("--noise-cap", type=int, default=400, help="clips sliced out of noise_real/")
+    p.add_argument(
+        "--max-clips-per-folder",
+        type=int,
+        default=None,
+        help="limit each source folder per train/validation split (smoke tests only)",
+    )
     p.add_argument("--no-specaugment", action="store_true")
     return p.parse_args()
 
@@ -342,7 +363,9 @@ def main() -> None:
     root = DATA_DIR / args.keyword
     gsc_split_exists = (root / "split.json").exists()
     holdout = None if gsc_split_exists else pick_holdout(root, args.holdout_speaker)
-    train, val, speakers, gsc_split = collect(args.keyword, holdout, args.noise_cap)
+    train, val, speakers, gsc_split = collect(
+        args.keyword, holdout, args.noise_cap, args.max_clips_per_folder
+    )
 
     x_tr, y_tr, real_tr = train.arrays()
     x_va, y_va, _ = val.arrays()

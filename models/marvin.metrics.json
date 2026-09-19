@@ -71,36 +71,36 @@
   "val_is_speaker_disjoint": true,
   "source": "speech_commands_v0.02",
   "smoothing": {
-    "window": 2,
-    "debounce_hits": 2
+    "window": 3,
+    "debounce_hits": 3
   },
   "splits": [
     {
       "split": "train",
-      "n": 12703,
-      "accuracy": 0.8307,
+      "n": 12307,
+      "accuracy": 0.3527,
       "confusion": [
         [
-          4405,
-          1843,
-          247
+          4223,
+          0,
+          2272
         ],
         [
-          0,
-          5469,
-          60
+          679,
+          2,
+          4452
         ],
         [
+          563,
           0,
-          0,
-          679
+          116
         ]
       ],
       "at_default_threshold": {
-        "threshold": 0.5,
+        "threshold": 0.52,
         "n_keyword": 6495,
-        "n_negative": 6208,
-        "tpr": 0.6778,
+        "n_negative": 5812,
+        "tpr": 0.0,
         "far": 0.0,
         "false_accepts": 0,
         "far_by_class": {
@@ -112,56 +112,56 @@
         {
           "threshold": 0.3,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.7158,
-          "far": 0.0002,
-          "false_accepts": 1,
+          "n_negative": 5812,
+          "tpr": 0.889,
+          "far": 0.7794,
+          "false_accepts": 4530,
           "far_by_class": {
-            "unknown": 0.0002,
-            "silence": 0.0
+            "unknown": 0.7721,
+            "silence": 0.8351
           }
         },
         {
           "threshold": 0.35,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.7059,
-          "far": 0.0,
-          "false_accepts": 0,
+          "n_negative": 5812,
+          "tpr": 0.7985,
+          "far": 0.3732,
+          "false_accepts": 2169,
           "far_by_class": {
-            "unknown": 0.0,
-            "silence": 0.0
+            "unknown": 0.3127,
+            "silence": 0.8306
           }
         },
         {
           "threshold": 0.4,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.6958,
-          "far": 0.0,
-          "false_accepts": 0,
+          "n_negative": 5812,
+          "tpr": 0.4577,
+          "far": 0.1313,
+          "false_accepts": 763,
           "far_by_class": {
-            "unknown": 0.0,
-            "silence": 0.0
+            "unknown": 0.0647,
+            "silence": 0.6348
           }
         },
         {
           "threshold": 0.45,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.6848,
-          "far": 0.0,
-          "false_accepts": 0,
+          "n_negative": 5812,
+          "tpr": 0.0511,
+          "far": 0.0423,
+          "false_accepts": 246,
           "far_by_class": {
-            "unknown": 0.0,
-            "silence": 0.0
+            "unknown": 0.0082,
+            "silence": 0.3004
           }
         },
         {
           "threshold": 0.5,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.6778,
+          "n_negative": 5812,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -172,8 +172,8 @@
         {
           "threshold": 0.55,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.6697,
+          "n_negative": 5812,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -184,8 +184,8 @@
         {
           "threshold": 0.6,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.6613,
+          "n_negative": 5812,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -196,8 +196,8 @@
         {
           "threshold": 0.65,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.653,
+          "n_negative": 5812,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -208,8 +208,8 @@
         {
           "threshold": 0.7,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.6446,
+          "n_negative": 5812,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -220,8 +220,8 @@
         {
           "threshold": 0.75,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.6322,
+          "n_negative": 5812,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -232,8 +232,8 @@
         {
           "threshold": 0.8,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.6202,
+          "n_negative": 5812,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -244,8 +244,8 @@
         {
           "threshold": 0.85,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.6043,
+          "n_negative": 5812,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -256,8 +256,8 @@
         {
           "threshold": 0.9,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.5835,
+          "n_negative": 5812,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -268,8 +268,8 @@
         {
           "threshold": 0.95,
           "n_keyword": 6495,
-          "n_negative": 6208,
-          "tpr": 0.5483,
+          "n_negative": 5812,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -282,33 +282,33 @@
     {
       "split": "val",
       "n": 11164,
-      "accuracy": 0.992,
+      "accuracy": 0.008,
       "confusion": [
         [
-          152,
-          42,
-          1
+          61,
+          0,
+          134
         ],
         [
+          1056,
           1,
-          10764,
-          45
+          9753
         ],
         [
+          132,
           0,
-          0,
-          159
+          27
         ]
       ],
       "at_default_threshold": {
-        "threshold": 0.5,
+        "threshold": 0.52,
         "n_keyword": 195,
         "n_negative": 10969,
-        "tpr": 0.7795,
-        "far": 0.0001,
-        "false_accepts": 1,
+        "tpr": 0.0,
+        "far": 0.0,
+        "false_accepts": 0,
         "far_by_class": {
-          "unknown": 0.0001,
+          "unknown": 0.0,
           "silence": 0.0
         }
       },
@@ -317,59 +317,59 @@
           "threshold": 0.3,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.8,
-          "far": 0.0002,
-          "false_accepts": 2,
+          "tpr": 0.9179,
+          "far": 0.773,
+          "false_accepts": 8479,
           "far_by_class": {
-            "unknown": 0.0002,
-            "silence": 0.0
+            "unknown": 0.772,
+            "silence": 0.8428
           }
         },
         {
           "threshold": 0.35,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.7846,
-          "far": 0.0002,
-          "false_accepts": 2,
+          "tpr": 0.6359,
+          "far": 0.282,
+          "false_accepts": 3093,
           "far_by_class": {
-            "unknown": 0.0002,
-            "silence": 0.0
+            "unknown": 0.2738,
+            "silence": 0.8365
           }
         },
         {
           "threshold": 0.4,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.7846,
-          "far": 0.0001,
-          "false_accepts": 1,
+          "tpr": 0.1026,
+          "far": 0.0505,
+          "false_accepts": 554,
           "far_by_class": {
-            "unknown": 0.0001,
-            "silence": 0.0
+            "unknown": 0.0417,
+            "silence": 0.6478
           }
         },
         {
           "threshold": 0.45,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.7795,
-          "far": 0.0001,
-          "false_accepts": 1,
+          "tpr": 0.0051,
+          "far": 0.0105,
+          "false_accepts": 115,
           "far_by_class": {
-            "unknown": 0.0001,
-            "silence": 0.0
+            "unknown": 0.0054,
+            "silence": 0.3585
           }
         },
         {
           "threshold": 0.5,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.7795,
-          "far": 0.0001,
-          "false_accepts": 1,
+          "tpr": 0.0,
+          "far": 0.0,
+          "false_accepts": 0,
           "far_by_class": {
-            "unknown": 0.0001,
+            "unknown": 0.0,
             "silence": 0.0
           }
         },
@@ -377,7 +377,7 @@
           "threshold": 0.55,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.7744,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -389,7 +389,7 @@
           "threshold": 0.6,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.759,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -401,7 +401,7 @@
           "threshold": 0.65,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.7487,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -413,7 +413,7 @@
           "threshold": 0.7,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.7282,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -425,7 +425,7 @@
           "threshold": 0.75,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.7128,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -437,7 +437,7 @@
           "threshold": 0.8,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.7077,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -449,7 +449,7 @@
           "threshold": 0.85,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.6872,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -461,7 +461,7 @@
           "threshold": 0.9,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.6667,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {
@@ -473,7 +473,7 @@
           "threshold": 0.95,
           "n_keyword": 195,
           "n_negative": 10969,
-          "tpr": 0.641,
+          "tpr": 0.0,
           "far": 0.0,
           "false_accepts": 0,
           "far_by_class": {

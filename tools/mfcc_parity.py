@@ -22,7 +22,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from node.capture import float_to_int16, load_wav_mono_16k  # noqa: E402
-from node.features import features_from_clip, mfcc_frame  # noqa: E402
+from node.features import features_from_clip  # noqa: E402
 from shared.config import DATA_DIR, KEYWORD  # noqa: E402
 from shared.feature_spec import CLIP_SAMPLES, SPEC  # noqa: E402
 
@@ -54,7 +54,7 @@ int main(int argc, char **argv) {
 def build_harness(workdir: Path) -> Path:
     src = workdir / "harness.cpp"
     src.write_text(
-        HARNESS % {"clip": CLIP_SAMPLES, "frames": SPEC.n_frames, "mfcc": SPEC.n_mfcc}
+        HARNESS % {"clip": CLIP_SAMPLES, "frames": SPEC.n_frames, "mfcc": SPEC.n_mels}
     )
     exe = workdir / "harness"
     cmd = [
@@ -83,7 +83,7 @@ def run_c(exe: Path, workdir: Path, clip_i16: np.ndarray) -> np.ndarray:
     proc = subprocess.run([str(exe), str(raw), str(out)], capture_output=True, text=True)
     if proc.returncode != 0:
         raise SystemExit(f"harness failed ({proc.returncode}): {proc.stderr}")
-    return np.frombuffer(out.read_bytes(), dtype="<f4").reshape(SPEC.n_frames, SPEC.n_mfcc)
+    return np.frombuffer(out.read_bytes(), dtype="<f4").reshape(SPEC.n_frames, SPEC.n_mels)
 
 
 def python_features_from_int16(clip_i16: np.ndarray) -> np.ndarray:
