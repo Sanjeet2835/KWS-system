@@ -8,3 +8,6 @@ data/_cache/*.tar.gz
 assets/chime.wav
 firmware/include/wifi_secrets.h
 .env
+notebooks/mlruns
+mlflow.db
+results/evaluation_all_models.json

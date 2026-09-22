@@ -1,0 +1,98 @@
+{
+  "model": {
+    "name": "dscnn_s_residual",
+    "keyword": "marvin",
+    "format": "Keras",
+    "precision": "FP32",
+    "path": "/home/sanjeet/ai_workspace/KWS model/sih-2026/models/marvin.keras",
+    "file_size_bytes": 435249,
+    "file_size": "425.05 KB",
+    "parameters": {
+      "total": 23747,
+      "trainable": 22595,
+      "non_trainable": 1152
+    },
+    "layers": 39,
+    "input": {
+      "shape": [
+        null,
+        49,
+        20,
+        1
+      ],
+      "dtype": "float32"
+    },
+    "output": {
+      "shape": [
+        null,
+        3
+      ],
+      "dtype": "float32"
+    }
+  },
+  "dataset": {
+    "validation_samples": 11164,
+    "feature_shape": [
+      49,
+      20,
+      1
+    ],
+    "classes": 3,
+    "gsc_test_split": true
+  },
+  "accuracy_metrics": {
+    "accuracy": 0.987370118237191,
+    "accuracy_percent": 98.7370118237191,
+    "tpr": 0.841,
+    "tpr_percent": 84.1,
+    "far": 0.0063,
+    "far_percent": 0.63,
+    "false_accepts": 69,
+    "threshold": 0.52
+  },
+  "confusion_matrix": {
+    "matrix": [
+      [
+        165,
+        29,
+        1
+      ],
+      [
+        78,
+        10699,
+        33
+      ],
+      [
+        0,
+        0,
+        159
+      ]
+    ],
+    "classes": 3
+  },
+  "inference": {
+    "batch_size": 1,
+    "preprocessing_included": false,
+    "postprocessing_included": false,
+    "description": "Model inference only",
+    "fp32": {
+      "mean_ms": 45.492491979998704,
+      "median_ms": 44.30930050011739,
+      "min_ms": 37.16974300004949,
+      "max_ms": 100.91370200007077,
+      "p95_ms": 54.76674920007553,
+      "p99_ms": 66.55065746034342
+    }
+  },
+  "tflite": {
+    "FP16": {
+      "mean_ms": 0.26733157000307983,
+      "median_ms": 0.2701319999687257,
+      "min_ms": 0.19333899990670034,
+      "max_ms": 0.4643409997697745,
+      "p95_ms": 0.33288244978848525,
+      "p99_ms": 0.38696061963491996,
+      "input_dtype": "<class 'numpy.float32'>",
+      "output_dtype": "<class 'numpy.float32'>",
+      "input_shape": [
+        

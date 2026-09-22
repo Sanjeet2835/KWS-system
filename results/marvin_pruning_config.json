@@ -1,0 +1,195 @@
+{
+  "source_model": "/home/sanjeet/ai_workspace/KWS model/sih-2026/models/marvin.keras",
+  "masked_model": "/home/sanjeet/ai_workspace/KWS model/sih-2026/models/marvin_pruned_masked.keras",
+  "keyword": "marvin",
+  "architecture_adapter": "DSCNNResidualAdapter",
+  "constraints": {
+    "min_tpr": 0.7,
+    "max_far": 0.01
+  },
+  "auto_pruning_ratio": 0.2,
+  "manual_masks": {},
+  "selected_channels": [
+    60,
+    47,
+    6,
+    19,
+    17,
+    24,
+    2,
+    31,
+    26
+  ],
+  "stream_width": 64,
+  "persistent_mask_layers": [
+    "stem_relu",
+    "block1_dw_relu",
+    "block1_out",
+    "block2_dw_relu",
+    "block2_out",
+    "block3_dw_relu",
+    "block3_out",
+    "block4_dw_relu",
+    "block4_out",
+    "block1_add",
+    "block2_add",
+    "block3_add",
+    "block4_add"
+  ],
+  "candidate_search": [
+    {
+      "candidate": 0.0,
+      "masked_channels": 0,
+      "accuracy": 0.987370118237191,
+      "tpr": 0.841025641025641,
+      "far": 0.006290454918406418,
+      "passes_constraints": true
+    },
+    {
+      "candidate": 0.05,
+      "masked_channels": 3,
+      "accuracy": 0.9809208169115012,
+      "tpr": 0.8153846153846154,
+      "far": 0.009025435317713557,
+      "passes_constraints": true
+    },
+    {
+      "candidate": 0.1,
+      "masked_channels": 6,
+      "accuracy": 0.9851307774991043,
+      "tpr": 0.764102564102564,
+      "far": 0.00619928890509618,
+      "passes_constraints": true
+    },
+    {
+      "candidate": 0.15,
+      "masked_channels": 9,
+      "accuracy": 0.9724113221067717,
+      "tpr": 0.7076923076923077,
+      "far": 0.006472786945026894,
+      "passes_constraints": true
+    },
+    {
+      "candidate": 0.2,
+      "masked_channels": 12,
+      "accuracy": 0.9753672518810462,
+      "tpr": 0.4153846153846154,
+      "far": 0.00355547451909928,
+      "passes_constraints": false
+    }
+  ],
+  "baseline_metrics": {
+    "accuracy": 0.987370118237191,
+    "tpr": 0.841025641025641,
+    "far": 0.006290454918406418,
+    "false_accepts": 69,
+    "threshold": 0.52,
+    "n_keyword": 195,
+    "n_negative": 10969,
+    "confusion_matrix": [
+      [
+        165,
+        29,
+        1
+      ],
+      [
+        78,
+        10699,
+        33
+      ],
+      [
+        0,
+        0,
+        159
+      ]
+    ],
+    "passes_constraints": true
+  },
+  "masked_metrics": {
+    "accuracy": 0.9724113221067717,
+    "tpr": 0.7076923076923077,
+    "far": 0.006472786945026894,
+    "false_accepts": 71,
+    "threshold": 0.52,
+    "n_keyword": 195,
+    "n_negative": 10969,
+    "confusion_matrix": [
+      [
+        138,
+        54,
+        3
+      ],
+      [
+        81,
+        10559,
+        170
+      ],
+      [
+        0,
+        0,
+        159
+      ]
+    ]
+  },
+  "reloaded_metrics": {
+    "accuracy": 0.9724113221067717,
+    "tpr": 0.7076923076923077,
+    "far": 0.006472786945026894,
+    "false_accepts": 71,
+    "threshold": 0.52,
+    "n_keyword": 195,
+    "n_negative": 10969,
+    "confusion_matrix": [
+      [
+        138,
+        54,
+        3
+      ],
+      [
+        81,
+        10559,
+        170
+      ],
+      [
+        0,
+        0,
+        159
+      ]
+    ]
+  },
+  "model_sizes": {
+    "baseline_bytes": 435249,
+    "baseline_kb": 425.0478515625,
+    "masked_bytes": 246443,
+    "masked_kb": 240.6669921875,
+    "delta_bytes": -188806,
+    "delta_percent": -43.378847510275726,
+    "note": "Masked model preserves architecture; physical channel removal has not been performed."
+  },
+  "final_comparison_table": [
+    {
+      "Model": "Baseline",
+      "Model file": "marvin.keras",
+      "Model size (KB)": 425.0478515625,
+      "Accuracy (%)": 98.7370118237191,
+      "TPR (%)": 84.1025641025641,
+      "FAR/FPR (%)": 0.6290454918406417,
+      "False accepts": 69,
+      "Masked channels": 0,
+      "Constraints passed": true,
+      "Architecture changed": "No"
+    },
+    {
+      "Model": "Masked",
+      "Model file": "marvin_pruned_masked.keras",
+      "Model size (KB)": 240.6669921875,
+      "Accuracy (%)": 97.24113221067718,
+      "TPR (%)": 70.76923076923077,
+      "FAR/FPR (%)": 0.6472786945026894,
+      "False accepts": 71,
+      "Masked channels": 9,
+      "Constraints passed": true,
+      "Architecture changed": "No"
+    }
+  ]
+}
